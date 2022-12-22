@@ -1,0 +1,9 @@
+res://Test.tscn
+res://Screens/Home.tscn
+res://Components/TabBar.tscn
+res://Comps/TabBar.tscn
+res://Comps/TabButton.tscn
+res://Comps/Pill.tscn
+res://Comps/Scripts/TabButton.gd
+res://Comps/TodoItem.tscn
+res://Comps/ListView.tscn

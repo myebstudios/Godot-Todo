@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=3 uid="uid://psovj0sqaoe"]
+
+[ext_resource type="FontFile" uid="uid://56p6vie1mbsf" path="res://Assets/Fonts/Roboto/Roboto-Medium.ttf" id="1_75ucu"]
+[ext_resource type="FontFile" uid="uid://dlow7lnkapqfp" path="res://Assets/Fonts/Roboto/Roboto-Regular.ttf" id="2_6mfl7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_imv48"]
+bg_color = Color(0.945098, 0.945098, 0.945098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_2q71h"]
+font = ExtResource("1_75ucu")
+font_size = 20
+font_color = Color(0.129412, 0.129412, 0.129412, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tt8r3"]
+font = ExtResource("2_6mfl7")
+font_size = 12
+font_color = Color(0.129412, 0.129412, 0.129412, 0.705882)
+
+[node name="TodoItem" type="Panel"]
+custom_minimum_size = Vector2(520, 90)
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = -680.0
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_imv48")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 22.0
+offset_top = -22.5
+offset_right = 306.0
+offset_bottom = 22.5
+grow_vertical = 2
+theme_override_constants/separation = 24
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Create an app"
+label_settings = SubResource("LabelSettings_2q71h")
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Create an app using the Godot Game Engine"
+label_settings = SubResource("LabelSettings_tt8r3")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -71.0
+offset_top = -15.0
+offset_right = -22.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "Delete"

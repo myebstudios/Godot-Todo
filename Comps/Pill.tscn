@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cris3tream2r2"]
+
+[ext_resource type="FontFile" uid="uid://56p6vie1mbsf" path="res://Assets/Fonts/Roboto/Roboto-Medium.ttf" id="1_rdxxa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jf36e"]
+bg_color = Color(0.992157, 0.4, 0.215686, 0.117647)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="Pill" type="Button"]
+custom_minimum_size = Vector2(18, 18)
+offset_right = 6.0
+offset_bottom = 13.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.992157, 0.4, 0.215686, 1)
+theme_override_colors/font_disabled_color = Color(0.992157, 0.4, 0.215686, 1)
+theme_override_fonts/font = ExtResource("1_rdxxa")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_jf36e")
+text = "0"

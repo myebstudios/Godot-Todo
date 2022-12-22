@@ -11,8 +11,18 @@ config_version=5
 [application]
 
 config/name="Godot Todo"
+run/main_scene="res://Screens/Home.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/image="res://Assets/Images/Logo.png"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+boot_splash/bg_color=Color(1, 1, 1, 1)
+config/icon="res://Assets/Images/Icon.png"
+
+[display]
+
+window/size/viewport_width=1200
+window/size/viewport_height=800
 
 [dotnet]
 
