@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://psovj0sqaoe"]
+[gd_scene load_steps=8 format=3 uid="uid://psovj0sqaoe"]
 
 [ext_resource type="FontFile" uid="uid://56p6vie1mbsf" path="res://Assets/Fonts/Roboto/Roboto-Medium.ttf" id="1_75ucu"]
+[ext_resource type="PackedScene" uid="uid://byxiyow0m7ny3" path="res://Comps/CheckButton.tscn" id="1_3602h"]
 [ext_resource type="FontFile" uid="uid://dlow7lnkapqfp" path="res://Assets/Fonts/Roboto/Roboto-Regular.ttf" id="2_6mfl7"]
+[ext_resource type="PackedScene" uid="uid://d2f5nge5ii5gp" path="res://Comps/IconButton.tscn" id="3_5ecnh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_imv48"]
 bg_color = Color(0.945098, 0.945098, 0.945098, 1)
@@ -31,7 +33,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_imv48")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 custom_minimum_size = Vector2(400, 0)
-layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
@@ -42,40 +43,42 @@ offset_bottom = 22.5
 grow_vertical = 2
 theme_override_constants/separation = 24
 
-[node name="CheckBox" type="CheckBox" parent="HBoxContainer"]
-layout_mode = 2
+[node name="CheckButton" parent="HBoxContainer" instance=ExtResource("1_3602h")]
+offset_top = 10.0
+offset_right = 24.0
+offset_bottom = 34.0
 size_flags_horizontal = 0
 size_flags_vertical = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
-layout_mode = 2
+offset_left = 48.0
+offset_right = 284.0
+offset_bottom = 45.0
 size_flags_horizontal = 0
 size_flags_vertical = 4
 theme_override_constants/separation = 0
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
+offset_right = 236.0
+offset_bottom = 27.0
 text = "Create an app"
 label_settings = SubResource("LabelSettings_2q71h")
 
 [node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
+offset_top = 27.0
+offset_right = 236.0
+offset_bottom = 45.0
 text = "Create an app using the Godot Game Engine"
 label_settings = SubResource("LabelSettings_tt8r3")
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
+[node name="IconButton" parent="." instance=ExtResource("3_5ecnh")]
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -71.0
-offset_top = -15.0
-offset_right = -22.0
-offset_bottom = 16.0
+offset_left = -48.0
+offset_top = -12.5
+offset_right = -24.0
+offset_bottom = 12.5
 grow_horizontal = 0
-grow_vertical = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-text = "Delete"

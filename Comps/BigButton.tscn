@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8wbqfsjeii8k"]
+
+[ext_resource type="Texture2D" uid="uid://bsxlrm8dfyk57" path="res://Assets/Icons/AddIcon.svg" id="1_gi28d"]
+[ext_resource type="FontFile" uid="uid://bx3jk7ukapxlh" path="res://Assets/Fonts/Roboto/Roboto-Bold.ttf" id="2_lk7js"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ej6yc"]
+bg_color = Color(0.960784, 0.960784, 0.960784, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_reej2"]
+font = ExtResource("2_lk7js")
+font_size = 14
+font_color = Color(0.129412, 0.129412, 0.129412, 1)
+
+[node name="BigButton" type="Panel"]
+custom_minimum_size = Vector2(0, 90)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ej6yc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -20.0
+offset_right = 30.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+offset_top = 8.0
+offset_right = 24.0
+offset_bottom = 32.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("1_gi28d")
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+offset_left = 30.0
+offset_top = 10.0
+offset_right = 90.0
+offset_bottom = 30.0
+size_flags_horizontal = 0
+text = "Add Todo"
+label_settings = SubResource("LabelSettings_reej2")
+vertical_alignment = 2

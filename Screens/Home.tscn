@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0y8jer5r6prq"]
+[gd_scene load_steps=5 format=3 uid="uid://c0y8jer5r6prq"]
 
 [ext_resource type="PackedScene" uid="uid://b7ypwbya82nq1" path="res://Comps/TabBar.tscn" id="1_880u2"]
 [ext_resource type="PackedScene" uid="uid://cd0xk5j3gw0j1" path="res://Comps/ListView.tscn" id="2_x6ber"]
+[ext_resource type="PackedScene" uid="uid://c8wbqfsjeii8k" path="res://Comps/BigButton.tscn" id="3_6roun"]
+[ext_resource type="PackedScene" uid="uid://byo5l2vbcuhq7" path="res://Comps/TodoPopup.tscn" id="4_1jmiu"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -34,5 +36,22 @@ grow_vertical = 2
 
 [node name="ListView" parent="Control" instance=ExtResource("2_x6ber")]
 offset_top = 47.0
+offset_bottom = -103.0
 
 [node name="TabBar" parent="Control" instance=ExtResource("1_880u2")]
+
+[node name="AddTodoButton" parent="Control" instance=ExtResource("3_6roun")]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+
+[node name="TodoPopup" parent="Control/AddTodoButton" instance=ExtResource("4_1jmiu")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -220.0
+offset_top = -226.0
+offset_right = 220.0
+offset_bottom = -26.0
+grow_horizontal = 2

@@ -19,6 +19,6 @@ func updateText():
 
 
 func updateMode():
-	$ColorRect.visible = active
+	$ColorRect.visible =mjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjhy5 active
 	$ColorRect.color = color
 	

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2f5nge5ii5gp"]
+
+[ext_resource type="Texture2D" uid="uid://dxyr1j5qli4ne" path="res://Assets/Icons/DeleteIcon.svg" id="1_k2qe0"]
+
+[node name="IconButton" type="TextureRect"]
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+texture = ExtResource("1_k2qe0")

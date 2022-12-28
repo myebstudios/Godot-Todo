@@ -1,9 +1,9 @@
-res://Test.tscn
+res://Comps/BigButton.tscn
 res://Screens/Home.tscn
-res://Components/TabBar.tscn
-res://Comps/TabBar.tscn
-res://Comps/TabButton.tscn
-res://Comps/Pill.tscn
-res://Comps/Scripts/TabButton.gd
-res://Comps/TodoItem.tscn
 res://Comps/ListView.tscn
+res://Comps/TodoItem.tscn
+res://Comps/TabBar.tscn
+res://Comps/IconButton.tscn
+res://Comps/Scripts/ListView.gd
+res://Comps/CheckButton.tscn
+res://Comps/TodoPopup.tscn
